@@ -50,6 +50,7 @@ echo "|"
 echo "| You are running Krusader as root, please be very carefull what you are doing!!!"
 echo "|"
 echo "+--------------------------------------------------------------------------------"
+echo
 cd ${DATA_DIR}
 if [ "${RUNASROOT}" == "true" ]; then
 	if [ "${DEV}" == "true" ]; then
