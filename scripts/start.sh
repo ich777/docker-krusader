@@ -54,7 +54,7 @@ term_handler() {
 
 trap 'kill ${!}; term_handler' SIGTERM
 if [ "${RUNASROOT}" == "true" ]; then
-	${USER} -c "/opt/scripts/start-server.sh" &
+	/opt/scripts/start-server.sh &
 else
 	su ${USER} -c "/opt/scripts/start-server.sh" &
 fi
