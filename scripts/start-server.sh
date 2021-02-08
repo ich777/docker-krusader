@@ -44,15 +44,15 @@ websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem ${NOVNC_PORT} lo
 sleep 2
 
 echo "---Starting Krusader---"
-echo
-echo "+--------------------------------------------------------------------------------"
-echo "|"
-echo "| You are running Krusader as root, please be very carefull what you are doing!!!"
-echo "|"
-echo "+--------------------------------------------------------------------------------"
-echo
 cd ${DATA_DIR}
 if [ "${RUNASROOT}" == "true" ]; then
+	echo
+	echo "+--------------------------------------------------------------------------------"
+	echo "|"
+	echo "| You are running Krusader as root, please be very carefull what you are doing!!!"
+	echo "|"
+	echo "+--------------------------------------------------------------------------------"
+	echo
 	if [ "${DEV}" == "true" ]; then
 		if [ ! -d /root/.config ]; then
 			/usr/bin/krusader --left /mnt --right /mnt ${START_PARAMS}
