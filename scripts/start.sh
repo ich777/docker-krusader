@@ -61,6 +61,13 @@ if [ "${RUNASROOT}" == "true" ]; then
 			chmod -R 755 /root/.config
 		fi
 	fi
+	if [ ! -d /root/.vnc ];then
+		if [ -d ${DATA_DIR}/.vnc ]; then
+			cp -r ${DATA_DIR}/.vnc /root/
+			chown -R root:root /root/.vnc
+			chmod -R 755 /root/.vnc
+		fi
+	fi
 	/opt/scripts/start-server.sh &
 else
 	su ${USER} -c "/opt/scripts/start-server.sh" &
