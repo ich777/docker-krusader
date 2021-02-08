@@ -54,6 +54,13 @@ term_handler() {
 
 trap 'kill ${!}; term_handler' SIGTERM
 if [ "${RUNASROOT}" == "true" ]; then
+	if [ ! -d /root/.config ];then
+		if [ -d ${DATA_DIR}/.config ]; then
+			cp -r ${DATA_DIR}/.config /root/
+			chown -R root:root /root/.config
+			chmod -R 755 /root/.config
+		fi
+	fi
 	/opt/scripts/start-server.sh &
 else
 	su ${USER} -c "/opt/scripts/start-server.sh" &
