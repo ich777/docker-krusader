@@ -3,7 +3,6 @@ FROM ich777/novnc-baseimage
 LABEL maintainer="admin@minenet.at"
 
 RUN export TZ=Europe/Rome && \
-	sed -i "/deb http:\/\/deb.debian.org\/debian buster main/c\deb http:\/\/deb.debian.org\/debian buster main non-free" /etc/apt/sources.list && \
 	apt-get update && \
     apt-get -y install --no-install-recommends krusader breeze-icon-theme kompare krename bzip2 lzma xz-utils  lhasa zip unzip arj unace rar unrar p7zip-full rpm konsole gedit && \
 	ln -s /usr/bin/arj /usr/bin/unarj && \
