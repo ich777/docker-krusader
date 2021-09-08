@@ -1,5 +1,4 @@
-[app] (Title=.*)
-  [Layer]	{2}
+[app] (Title=Krusader)
   [Maximized]	{yes}
   [Deco]	{none}
 [end]
