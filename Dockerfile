@@ -4,7 +4,7 @@ LABEL maintainer="admin@minenet.at"
 
 RUN export TZ=Europe/Rome && \
 	apt-get update && \
-    apt-get -y install --no-install-recommends krusader breeze-icon-theme kompare krename bzip2 lzma xz-utils  lhasa zip unzip arj unace rar unrar p7zip-full rpm konsole gedit dbus-x11 && \
+    apt-get -y install --no-install-recommends krusader breeze-icon-theme kompare krename bzip2 lzma xz-utils  lhasa zip unzip arj unace rar unrar p7zip-full rpm konsole gedit dbus-x11 keditbookmarks && \
 	ln -s /usr/bin/arj /usr/bin/unarj && \
 	ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 	echo $TZ > /etc/timezone && \
