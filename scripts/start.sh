@@ -48,8 +48,9 @@ chmod -R 0700 /tmp/xdg
 chmod ${DATA_PERM} /mnt
 
 term_handler() {
-	kill -SIGTERM "$killpid"
-	wait "$killpid" -f 2>/dev/null
+	kill -SIGTERM $(pidof krusader)
+	tail --pid=$(pidof krusader) -f 2>/dev/null
+	sleep 0.5
 	exit 143;
 }
 
