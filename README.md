@@ -31,15 +31,15 @@ docker run --name Krusader -d \
 ```
 
 ## Set VNC Password:
- Please be sure to create the password first inside the container, to do that open up a console from the container (Unraid: click on the container icon and on 'Console' then type in the following:
+ Please be sure to create the password first inside the container, to do that open up a console from the container (Unraid: In the Docker tab click on the container icon and on 'Console' then type in the following):
 
 1) **su $USER**
 2) **vncpasswd**
 3) **ENTER YOUR PASSWORD TWO TIMES AND PRESS ENTER AND SAY NO WHEN IT ASKS FOR VIEW ACCESS**
 
-When you are on Unraid close the console, edit the template and create a variable with the Key: 'TURBOVNC_PARAMS' and leave the Value empty, click Add and Apply.
+Unraid: close the console, edit the template and create a variable with the `Key`: `TURBOVNC_PARAMS` and leave the `Value` empty, click `Add` and `Apply`.
 
-On all other Docker instances create a environment variable `TURBOVNC_PARAMS` that is empty:
+All other platforms running Docker: create a environment variable `TURBOVNC_PARAMS` that is empty or simply leave it empty:
 ```
     --env 'TURBOVNC_PARAMS='
 ```
