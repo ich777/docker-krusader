@@ -1,4 +1,4 @@
-[app] (Title=Krusader)
+[app] (class=krusader)
   [Maximized]	{yes}
   [Deco]	{none}
 [end]
