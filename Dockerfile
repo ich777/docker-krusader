@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source="https://github.com/ich777/docker-krusader
 RUN export TZ=Europe/Rome && \
 	echo "deb http://deb.debian.org/debian bookworm contrib non-free non-free-firmware" > /etc/apt/sources.list && \
 	apt-get update && \
-    apt-get -y install --no-install-recommends krusader breeze-icon-theme kompare krename bzip2 lzma xz-utils  lhasa zip unzip arj unace rar unrar p7zip-full rpm konsole gedit dbus-x11 keditbookmarks feh fonts-takao fonts-arphic-uming fonts-noto-cjk kf6-breeze-icon-theme libkf6iconthemes-bin libkf6iconthemes libkf6xmlgui6 libkf6widgetsaddons6 adwaita-icon-theme && \
+    apt-get -y install --no-install-recommends krusader breeze-icon-theme kompare krename bzip2 lzma xz-utils  lhasa zip unzip arj unace rar unrar p7zip-full rpm konsole gedit dbus-x11 keditbookmarks feh fonts-takao fonts-arphic-uming fonts-noto-cjk kf6-breeze-icon-theme libkf6iconthemes-bin libkf6iconthemes6 libkf6xmlgui6 libkf6widgetsaddons6 adwaita-icon-theme && \
 	ln -s /usr/bin/arj /usr/bin/unarj && \
 	ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 	echo $TZ > /etc/timezone && \
